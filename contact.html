@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Zeen Zaven</title>
+    <meta name="description" content="Get in touch with Zeen Zaven. Book a free 30-minute strategy call or email us directly to start engineering your brand's attention.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 5% 80px;
+            background: radial-gradient(ellipse at 50% 10%, rgba(0,240,255,0.06) 0%, transparent 65%);
+        }
+
+        .contact-tag {
+            font-family: var(--font-data);
+            color: var(--accent-yellow);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .contact-sub {
+            font-size: 1.05rem;
+            color: #888;
+            text-align: center;
+            max-width: 500px;
+            line-height: 1.65;
+            margin-bottom: 64px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .contact-card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 42px 38px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .contact-card.primary {
+            border-color: var(--accent-cyan);
+            background: #0d1e20;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .contact-card-label {
+            font-family: var(--font-data);
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .contact-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .contact-card.primary .contact-card-title { color: var(--accent-cyan); }
+
+        .contact-card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex: 1;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 14px 24px;
+            font-family: var(--font-data);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-btn.primary {
+            background: var(--accent-cyan);
+            color: #000;
+            border: 2px solid var(--accent-cyan);
+        }
+
+        .contact-btn.primary:hover {
+            background: transparent;
+            color: var(--accent-cyan);
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 2px solid #333;
+        }
+
+        .contact-btn.secondary:hover {
+            background: var(--text-main);
+            color: var(--bg-dark);
+            border-color: var(--text-main);
+        }
+
+        .contact-detail {
+            font-family: var(--font-data);
+            font-size: 0.88rem;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+            word-break: break-all;
+        }
+
+        @media (max-width: 680px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <header class="sticky-header scrolled" id="stickyHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">ZZ<span>.</span></a>
+            <nav class="header-nav">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#infrastructure" class="nav-link">Web</a>
+                <a href="index.html#metrics" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-cta" style="opacity:0.7">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#infrastructure" class="nav-link">Web</a>
+            <a href="index.html#metrics" class="nav-link">Results</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <p class="contact-tag">&lt; INITIATE CONTACT /&gt;</p>
+        <h1 class="contact-title">LET'S <span class="highlight-cyan">BUILD.</span></h1>
+        <p class="contact-sub">Ready to engineer unstoppable attention? Book a free 30-minute strategy call or drop us an email — we reply fast.</p>
+
+        <div class="contact-grid">
+            <!-- Calendly Card -->
+            <div class="contact-card primary">
+                <div class="contact-icon">📅</div>
+                <p class="contact-card-label">Fastest Route</p>
+                <h2 class="contact-card-title">Book a Call</h2>
+                <p class="contact-card-desc">
+                    Grab a free 30-minute strategy session. We'll audit your current content, identify growth gaps, and lay out exactly how Zeen Zaven can scale your brand.
+                </p>
+                <a href="https://calendly.com/zeenzaven/30min" target="_blank" rel="noopener noreferrer" class="contact-btn primary">BOOK 30-MIN CALL ↗</a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <p class="contact-card-label">Direct Line</p>
+                <h2 class="contact-card-title">Email Us</h2>
+                <p class="contact-card-desc">
+                    Have a specific question, a project brief, or just want to see if we're the right fit? Send us a message and we'll get back to you within 24 hours.
+                </p>
+                <p class="contact-detail">zeenzaven@gmail.com</p>
+                <a href="mailto:zeenzaven@gmail.com" class="contact-btn secondary">SEND AN EMAIL →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="header-logo">ZZ<span>.</span></a>
+                <p>We engineer attention for brands that refuse to be ignored.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-status"><span class="status-dot"></span> ALL AGENTS ACTIVE</div>
+        </div>
+        <div class="footer-copy">© 2025 Zeen Zaven. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const bar = document.getElementById('scrollProgressBar');
+        window.addEventListener('scroll', () => { bar.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%'; });
+        const hb = document.getElementById('hamburger'), mn = document.getElementById('mobileNav');
+        hb.addEventListener('click', () => { hb.classList.toggle('open'); mn.classList.toggle('open'); });
+        mn.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { hb.classList.remove('open'); mn.classList.remove('open'); }));
+    </script>
+</body>
+</html>
